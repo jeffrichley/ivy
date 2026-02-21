@@ -1,0 +1,11 @@
+version: 1
+bed:
+  id: ivy
+  registered_at: '2026-02-20T23:56:03Z'
+  root: .
+garden:
+  id: default
+  profile: default
+overrides:
+  targets: {}
+  disabled_artifacts: []

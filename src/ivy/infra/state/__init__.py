@@ -1,0 +1,2 @@
+"""State persistence adapters."""
+

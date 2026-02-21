@@ -1,0 +1,230 @@
+🏗 Step 2 — Set Up Columns (State Machine)
+
+Delete the default columns if needed.
+
+Create these columns exactly:
+
+Backlog
+
+Ready
+
+In Progress
+
+Review
+
+Needs Rework
+
+Done
+
+This is your value flow.
+
+Backlog = idea inventory
+Ready = committed
+In Progress = active
+Review = waiting on approval
+Needs Rework = failed acceptance
+Done = shipped
+
+Do not add more columns right now.
+
+🧩 Step 3 — Add Custom Fields (Very Important)
+
+Click Settings → Fields.
+
+Add:
+
+1️⃣ Status (Single Select)
+
+Values:
+
+Backlog
+
+Ready
+
+In Progress
+
+Review
+
+Needs Rework
+
+Done
+
+(This mirrors your board columns — gives filtering power.)
+
+2️⃣ Work Type (Single Select)
+
+Values:
+
+Story
+
+Task
+
+Bug
+
+Research
+
+Refactor
+
+3️⃣ Owner (Single Select)
+
+Values:
+
+Human
+
+Lily
+
+Nova
+
+Warden
+
+Director
+
+This is for when your agents start generating work.
+
+4️⃣ Ship Phase (Optional, very you)
+
+Values:
+
+Slice 001
+
+Slice 002
+
+Phase 0
+
+Phase 1
+
+etc.
+
+Don’t overthink it. Just future-proofing.
+
+📋 Step 4 — Create a Story Template
+
+Go to your repo:
+
+Settings → Issues → Templates → New Template
+
+Call it: story.md
+
+Put this in it:
+
+## User Story
+
+As a ______,
+I want ______,
+So that ______.
+
+## Acceptance Criteria
+- [ ] Criterion 1
+- [ ] Criterion 2
+- [ ] Criterion 3
+
+## Out of Scope
+(What we are NOT building in this slice)
+
+This keeps tech out of stories.
+
+Save it.
+
+🛠 Step 5 — Create a Task Template
+
+New template: task.md
+
+## Parent Story
+Link to story: #
+
+## Objective
+What needs to be built?
+
+## Technical Scope
+- Implementation detail 1
+- Implementation detail 2
+
+## Acceptance Criteria
+- [ ] Criterion 1
+- [ ] Criterion 2
+
+Now your system enforces separation between value and implementation.
+
+🔄 Step 6 — Connect Issues to the Project
+
+When creating a Story:
+
+Use the template
+
+Assign label story
+
+Add to project
+
+Set Status = Backlog
+
+Set Work Type = Story
+
+Tasks:
+
+Label task
+
+Link to parent story
+
+Add to project
+
+Set Status = Backlog
+
+🎯 Step 7 — First Execution Cycle (Ship Discipline)
+
+Do NOT add everything.
+
+Start with:
+
+5–10 stories total created as issues.
+
+Only 2–3 added to project.
+
+Only 1 moved to Ready.
+
+Only 1 in In Progress.
+
+That’s it.
+
+This prevents cognitive overload.
+
+🤖 Step 8 — When You Let AI Touch It
+
+Later, your agent can:
+
+Create Story issues
+
+Decompose into Task issues
+
+Add them to the project via GitHub API
+
+Update status fields
+
+But don’t automate until you manually use it once.
+
+Feel the workflow first.
+
+🧠 What You’ll Notice
+
+This will immediately:
+
+Make scope visible
+
+Separate vision from code
+
+Give you Ship/Cut clarity
+
+Prevent ticket explosion
+
+Let you scale to multi-agent later
+
+Optional Upgrade (Later)
+
+Once comfortable:
+
+Add a “Roadmap” table view.
+
+Add filtering by Owner.
+
+Add automation (when status changes → move column).
+
+But not today.
